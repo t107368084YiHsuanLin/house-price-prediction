@@ -111,4 +111,6 @@ np.savetxt('/home/t107368084/machine/ans.csv', Y_predict, delimiter = ',')#儲�
 
 7.訓練過程
 
+        house-price-prediction/ML.jpg
+      
 

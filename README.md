@@ -88,3 +88,23 @@ model.add(Dense(1,  kernel_initializer='normal'))                               
 
 model.compile(loss='MAE', optimizer='adam')                                                      #compile 模組 loss選平均絕對誤差 優化器選adam
 
+5.設定訓練次數跟Batch_size
+
+epochs = 700      #訓練次數
+
+batch_size = 64 #數字越大 處理相同數據的速度變快 但是達到相同精度的epochs的數字也要越來越高
+
+6.將模型保留及輸出檔案
+
+file_name=str(epochs)+'_'+str(batch_size)
+
+TB=TensorBoard(log_dir='logs/'+file_name, histogram_freq=0)
+
+model.fit(X_train, Y_train, batch_size=batch_size, epochs=epochs,verbose=1,validation_data=(X_valid, Y_valid),callbacks=[TB])
+
+model.save("/home/t107368084/machine/model.h5")#儲存模型
+
+
+Y_predict = model.predict(X_test)                                         #將price的預測結果提出來
+
+np.savetxt('/home/t107368084/machine/ans.csv', Y_predict, delimiter = ',')#儲存起來

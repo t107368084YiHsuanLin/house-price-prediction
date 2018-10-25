@@ -58,6 +58,9 @@ test   = pd.read_csv('/home/t107368084/machine/test-v3.csv')    #載入測試集
 X_test = test.drop('id',axis=1).values
 
 3.測試檔案是否讀取成功
+
 train.shape 
+
 valid.shape
+
 test.shape

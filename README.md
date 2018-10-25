@@ -67,3 +67,24 @@ X_test = test.drop('id',axis=1).values
   valid.shape
   
   test.shape
+
+4.使用Sequential實作
+
+model = Sequential()                                                                             #使用Keras的Sequential模型
+
+model.add(Dense(32, input_dim=X_train.shape[1],  kernel_initializer='normal',activation='relu')) #製作模組 input layer 有32個變數
+
+model.add(Dense(128, input_dim=32,  kernel_initializer='normal',activation='relu'))              #權重初始值選normal 激勵函數選主流relu
+
+model.add(Dense(128, input_dim=128,  kernel_initializer='normal',activation='relu'))
+
+model.add(Dense(32, input_dim=128,  kernel_initializer='normal',activation='relu'))
+
+model.add(Dense(X_train.shape[1], input_dim=128,  kernel_initializer='normal',activation='relu'))
+
+
+model.add(Dense(1,  kernel_initializer='normal'))                                                #output layer
+
+
+model.compile(loss='MAE', optimizer='adam')                                                      #compile 模組 loss選平均絕對誤差 優化器選adam
+

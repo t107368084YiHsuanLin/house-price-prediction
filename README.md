@@ -59,5 +59,7 @@ X_test = test.drop('id',axis=1).values
 
 3.測試檔案是否讀取成功
   train.shape
+  
   valid.shape
+  
   test.shape

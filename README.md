@@ -108,3 +108,7 @@ model.save("/home/t107368084/machine/model.h5")#儲存模型
 Y_predict = model.predict(X_test)                                         #將price的預測結果提出來
 
 np.savetxt('/home/t107368084/machine/ans.csv', Y_predict, delimiter = ',')#儲存起來
+
+7.訓練過程
+
+

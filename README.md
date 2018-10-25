@@ -23,9 +23,17 @@ first HW of machine learning
 
 ## 程式碼
 
-import pandas as pd                           #載入需要的數據庫
+ 1.載入需要的數據庫
+ 
+import pandas as pd 
+
 import numpy as np
+
 from tensorflow.keras.models import Sequential
+
 from tensorflow.keras.layers import *
+
 from tensorflow.keras.callbacks import *
+
 from sklearn.preprocessing import *
+

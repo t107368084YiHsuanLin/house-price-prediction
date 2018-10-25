@@ -111,5 +111,10 @@ np.savetxt('/home/t107368084/machine/ans.csv', Y_predict, delimiter = ',')#儲�
 
 7.訓練過程
 ![image](https://github.com/t107368084YiHsuanLin/house-price-prediction/blob/master/ML.jpg)
+
+8.kaggle排名
+![image](https://github.com/t107368084YiHsuanLin/house-price-prediction/blob/master/ML2.jpg)
+
+9.
       
 

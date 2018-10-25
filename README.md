@@ -37,3 +37,22 @@ from tensorflow.keras.callbacks import *
 
 from sklearn.preprocessing import *
 
+2.讀取檔案
+
+train   = pd.read_csv('/home/t107368084/machine/train-v3.csv')#載入訓練集
+
+X_train = train.drop(['price','id'],axis=1).values            #因為是訓練資料組所以去除id跟price
+
+Y_train = train['price'].values                               #train裡面的price
+
+
+valid   = pd.read_csv('/home/t107368084/machine/valid-v3.csv')#載入驗證集
+
+X_valid = valid.drop(['price','id'],axis=1).values
+
+Y_valid = valid['price'].values
+
+
+test   = pd.read_csv('/home/t107368084/machine/test-v3.csv')  #載入測試集
+
+X_test = test.drop('id',axis=1).values
